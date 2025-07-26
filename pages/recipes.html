@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - Food Blog</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Food Blog</div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recipes-header">
+            <h1>Explore Our Recipes</h1>
+            <p>Discover a world of delicious dishes for every occasion</p>
+            
+            <div class="search-and-filter">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search recipes..." id="recipeSearch">
+                </div>
+                
+                <div class="advanced-filters">
+                    <select id="cuisineFilter">
+                        <option value="">All Cuisines</option>
+                        <option value="italian">Italian</option>
+                        <option value="asian">Asian</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="mediterranean">Mediterranean</option>
+                    </select>
+                    <select id="dietFilter">
+                        <option value="">All Diets</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="gluten-free">Gluten Free</option>
+                    </select>
+                    <select id="timeFilter">
+                        <option value="">Cooking Time</option>
+                        <option value="quick">Under 30 mins</option>
+                        <option value="medium">30-60 mins</option>
+                        <option value="long">Over 60 mins</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipe-categories">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">
+                    <i class="fas fa-utensils"></i>
+                    All Recipes
+                </button>
+                <button class="category-tab" data-category="breakfast">
+                    <i class="fas fa-coffee"></i>
+                    Breakfast
+                </button>
+                <button class="category-tab" data-category="lunch">
+                    <i class="fas fa-hamburger"></i>
+                    Lunch
+                </button>
+                <button class="category-tab" data-category="dinner">
+                    <i class="fas fa-drumstick-bite"></i>
+                    Dinner
+                </button>
+                <button class="category-tab" data-category="desserts">
+                    <i class="fas fa-ice-cream"></i>
+                    Desserts
+                </button>
+                <button class="category-tab" data-category="snacks">
+                    <i class="fas fa-cookie-bite"></i>
+                    Snacks
+                </button>
+            </div>
+        </section>
+
+        <section class="featured-collections">
+            <h2>Popular Collections</h2>
+            <div class="collections-grid">
+                <a href="recipes/breakfast.html" class="collection-card">
+                    <div class="collection-image">
+                        <img src="../images/breakfast-collection.avif" alt="Breakfast Collection">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Breakfast Favorites</h3>
+                        <p>Start your day right</p>
+                        <span class="recipe-count">9 recipes</span>
+                    </div>
+                </a>
+                <a href="recipes/italian.html" class="collection-card">
+                    <div class="collection-image">
+                        <img src="../images/italian-collection.avif" alt="Italian Collection">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Italian Cuisine</h3>
+                        <p>Authentic Italian dishes</p>
+                        <span class="recipe-count">12 recipes</span>
+                    </div>
+                </a>
+                <a href="recipes/asian.html" class="collection-card">
+                    <div class="collection-image">
+                        <img src="../images/asian-collection.avif" alt="Asian Collection">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Asian Delights</h3>
+                        <p>Explore Asian flavors</p>
+                        <span class="recipe-count">15 recipes</span>
+                    </div>
+                </a>
+                <a href="recipes/desserts.html" class="collection-card">
+                    <div class="collection-image">
+                        <img src="../images/dessert-collection.avif" alt="Dessert Collection">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Sweet Treats</h3>
+                        <p>Delicious desserts</p>
+                        <span class="recipe-count">8 recipes</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="recipe-results">
+            <div class="results-header">
+                <h2>All Recipes</h2>
+                <div class="sort-options">
+                    <label for="sortRecipes">Sort by:</label>
+                    <select id="sortRecipes">
+                        <option value="newest">Newest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="quick">Quickest to Make</option>
+                    </select>
+                </div>
+            </div>
+            <div class="recipes-grid">
+                <!-- Recipe cards will be dynamically added here using JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-expanded">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p class="footer-about">We are passionate about sharing delicious recipes and culinary experiences with food lovers around the world.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="recipes.html">All Recipes</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Recipe Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Breakfast</a></li>
+                    <li><a href="#">Main Course</a></li>
+                    <li><a href="#">Desserts</a></li>
+                    <li><a href="#">Vegetarian</a></li>
+                    <li><a href="#">Healthy</a></li>
+                    <li><a href="#">Quick & Easy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get new recipes and cooking tips!</p>
+                <form class="footer-subscribe">
+                    <div class="subscribe-input">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@foodblog.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Recipe Street, FC 12345</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Food Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
